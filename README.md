@@ -4,20 +4,27 @@
 # `troopdata`: Tools for Analyzing Cross-National Military Deployment and Basing Data
 
 <!-- badges: start -->
+
+[![](https://www.r-pkg.org/badges/version/troopdata?color=blue)](https://cran.r-project.org/package=troopdata)
+[![](https://img.shields.io/badge/devel%20version-0.1.3-green.svg)](https://github.com/meflynn/troopdata)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/troopdata?color=orange)](https://cran.r-project.org/package=troopdata)
+[![](http://cranlogs.r-pkg.org/badges/last-month/troopdata?color=red)](https://cran.r-project.org/package=troopdata)
+[![](http://cranlogs.r-pkg.org/badges/last-week/troopdata?color=yellow)](https://cran.r-project.org/package=troopdata)
 <!-- badges: end -->
 
 <img src="man/figures/logo.png" alt="troopdata hex logo" align="right" width="200" style="padding: 0 15px; float: right;"/>
 
-The goal of the troopdata package is to facilitate the distribution of
-military deployment and basing data for use in social science research
-and journalism. The troop deployment data were initially compiled by Tim
-Kane using information obtained from the U.S. Department of Defense’s
-Defense Manpower Data Center (DMDC). The original data ended in 2005 and
-we have updated it to run through 2020. Similarly, the basing data were
-initially compiled by David Vine, and we have updated the original data
-using open source information from the U.S. military and press reports
-through 2018. We have also assembled this R package to allow users to
-more easily access the data and use it in their own research.
+The goal of the `{troopdata}` package is to facilitate the distribution
+of military deployment and basing data for use in social science
+research and journalism. The troop deployment data were initially
+compiled by Tim Kane using information obtained from the U.S. Department
+of Defense’s Defense Manpower Data Center (DMDC). The original data
+ended in 2005 and we have updated it to run through 2020. Similarly, the
+basing data were initially compiled by David Vine, and we have updated
+the original data using open source information from the U.S. military
+and press reports through 2018. We have also assembled this R package to
+allow users to more easily access the data and use it in their own
+research.
 
 The package will be updated with additional features in the future, but
 for now please let me know if you find any errors.
@@ -26,11 +33,16 @@ Please refer to the bottom of this page for citation information.
 
 ## Installation
 
-You can install the `troopdata` package from
+You can install the `troopdata` package from CRAN or
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
+#install.packages("devtools")
+
+install.packages("troopdata")
+
+or 
+
 devtools::install_github("meflynn/troopdata")
 ```
 
@@ -77,15 +89,15 @@ example <- get_troopdata(host = hostlist, startyear = 1990, endyear = 2020)
 #> element will be used
 
 head(example)
-#> # A tibble: 6 x 9
-#>   countryname    ccode iso3c  year troops  army  navy air_force marine_corps
-#>   <chr>          <dbl> <chr> <dbl>  <dbl> <dbl> <dbl>     <dbl>        <dbl>
-#> 1 United Kingdom   200 GBR    1990  25111    NA    NA        NA           NA
-#> 2 United Kingdom   200 GBR    1991  23442    NA    NA        NA           NA
-#> 3 United Kingdom   200 GBR    1992  20048    NA    NA        NA           NA
-#> 4 United Kingdom   200 GBR    1993  16100    NA    NA        NA           NA
-#> 5 United Kingdom   200 GBR    1994  13781    NA    NA        NA           NA
-#> 6 United Kingdom   200 GBR    1995  12131    NA    NA        NA           NA
+#> # A tibble: 6 x 5
+#>   countryname    ccode iso3c  year troops
+#>   <chr>          <dbl> <chr> <dbl>  <dbl>
+#> 1 United Kingdom   200 GBR    1990  25111
+#> 2 United Kingdom   200 GBR    1991  23442
+#> 3 United Kingdom   200 GBR    1992  20048
+#> 4 United Kingdom   200 GBR    1993  16100
+#> 5 United Kingdom   200 GBR    1994  13781
+#> 6 United Kingdom   200 GBR    1995  12131
 ```
 
 Or you can use a character vector of ISO3C codes.
@@ -98,15 +110,15 @@ example.char <- get_troopdata(host = hostlist.char, startyear = 1970, endyear = 
 #> element will be used
 
 head(example.char)
-#> # A tibble: 6 x 9
-#>   countryname ccode iso3c  year troops  army  navy air_force marine_corps
-#>   <chr>       <dbl> <chr> <dbl>  <dbl> <dbl> <dbl>     <dbl>        <dbl>
-#> 1 Canada         20 CAN    1970   2643    NA    NA        NA           NA
-#> 2 Canada         20 CAN    1971   1835    NA    NA        NA           NA
-#> 3 Canada         20 CAN    1972   1742    NA    NA        NA           NA
-#> 4 Canada         20 CAN    1973   1362    NA    NA        NA           NA
-#> 5 Canada         20 CAN    1974   1580    NA    NA        NA           NA
-#> 6 Canada         20 CAN    1975   1301    NA    NA        NA           NA
+#> # A tibble: 6 x 5
+#>   countryname ccode iso3c  year troops
+#>   <chr>       <dbl> <chr> <dbl>  <dbl>
+#> 1 Canada         20 CAN    1970   2643
+#> 2 Canada         20 CAN    1971   1835
+#> 3 Canada         20 CAN    1972   1742
+#> 4 Canada         20 CAN    1973   1362
+#> 5 Canada         20 CAN    1974   1580
+#> 6 Canada         20 CAN    1975   1301
 ```
 
 ``` r
@@ -243,7 +255,7 @@ basemap <- ggplot() +
 basemap
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
 
 ## A note on country codes
 

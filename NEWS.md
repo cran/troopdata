@@ -1,3 +1,8 @@
+# troopdata 0.1.3
+
+* Fixed error where Kane data classifies troops as being present in Vietnam during the Vietnam War but COW recognizes South Vietnam as a separate country.
+* Fixed error where `get_troopdata()` function was always returning branch data.
+
 # troopdata 0.1.2
 
 * Modified version number down to better adhere to R package best practices.
