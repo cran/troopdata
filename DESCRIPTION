@@ -1,7 +1,7 @@
 Package: troopdata
 Title: Tools for Analyzing Cross-National Military Deployment and
         Basing Data
-Version: 0.1.3
+Version: 0.1.4
 Authors@R: 
     person(given = "Michael",
            family = "Flynn",
@@ -18,12 +18,12 @@ RoxygenNote: 7.1.1
 URL: https://github.com/meflynn/troopdata
 BugReports: https://github.com/meflynn/troopdata/issues
 Depends: R (>= 3.5.0)
-Imports: magrittr, dplyr, tibble, countrycode, tidyr, stringr,
-        readstata13, rlang, haven
-Suggests: testthat (>= 3.0.0), spelling
+Imports: magrittr, dplyr, tibble, rlang
+Suggests: testthat (>= 3.0.0), spelling, knitr, rmarkdown, viridis,
+        ggplot2, countrycode, tidyr, stringr, readstata13, haven, maps
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2021-04-12 17:42:19 UTC; flynn
+Packaged: 2021-09-02 21:32:34 UTC; michaelflynn
 Author: Michael Flynn [aut, cre] (<https://orcid.org/0000-0002-6064-740X>)
 Repository: CRAN
-Date/Publication: 2021-04-12 18:10:02 UTC
+Date/Publication: 2021-09-02 23:50:02 UTC

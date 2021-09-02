@@ -1,4 +1,4 @@
-globalVariables(c('countryname', 'ccode', 'iso3c', 'base', 'lilypad', 'fundedsite', 'basecount', 'lilypadcount', 'fundedsitecount'))
+globalVariables(c('countryname', 'ccode', 'iso3c', 'base', 'lilypad', 'fundedsite', 'basecount', 'lilypadcount', 'fundedsitecount', '.data'))
 
 #' Function to retrieve customized U.S. basing data
 #'
@@ -12,6 +12,7 @@ globalVariables(c('countryname', 'ccode', 'iso3c', 'base', 'lilypad', 'fundedsit
 #'
 #' @param host The Correlates of War (COW) numeric country code or ISO3C code for the host country or countries in the series
 #' @param country_count Logical. Should the function return a country-level count of the total number of bases or the country-site data
+#' @param groupvar A character string indicating how country count totals should be generated. Accepted values are 'countryname', 'ccode', or 'iso3c'. Can take on Required when using country_count argument.
 #' @importFrom rlang warn
 #' @export
 #' @references
@@ -32,48 +33,42 @@ globalVariables(c('countryname', 'ccode', 'iso3c', 'base', 'lilypad', 'fundedsit
 #'
 
 
-get_basedata <- function(host = NA, country_count = FALSE) {
+get_basedata <- function(host = NA, country_count = FALSE, groupvar = NULL) {
 
-  if (!is.numeric(host) & !is.character(host) & !is.na(host)) {
-    warn(message = "Host argument should be numeric value or a vector of numeric values corresponding to COW or ISO3C country codes.")
-  }
+  if(country_count == TRUE) rlang::warn("Must specify grouping variable when using country_count.")
+  if(!is.null(groupvar)) rlang::warn("group var must equal 'countryname', 'ccode', or 'iso3c'.")
+
 
   basetemp <- troopdata::basedata
 
+
   if (is.na(host)) {
 
-    return(basetemp)
+    basetemp <- basetemp
 
   } else if (is.numeric(host)) {
-
-    host <- c(host)
 
     basetemp <- basetemp %>%
       dplyr::filter(ccode %in% host)
 
-    return(basetemp)
 
   } else {
-
-    host <- c(host)
 
     basetemp <- basetemp %>%
       dplyr::filter(iso3c %in% host)
 
-    return(basetemp)
-
   }
 
-  if (country_count) {
+  if (country_count==TRUE) {
+
 
     basetemp <- basetemp %>%
-      dplyr::group_by(ccode) %>%
+      dplyr::group_by(.data[[groupvar]]) %>%
       dplyr::summarise(basecount = sum(base, na.rm = TRUE),
                        lilypadcount = sum(lilypad, na.rm = TRUE),
                        fundedsitecount = sum(fundedsite, na.rm = TRUE))
 
     return(basetemp)
-
 
   } else {
 

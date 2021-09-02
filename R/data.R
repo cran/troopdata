@@ -13,6 +13,7 @@
 #' \item{\code{countryname}}{A character vector of country names.}
 #' \item{\code{ccode}}{A numeric vector of Correlates of War country codes.}
 #' \item{\code{iso3c}}{A character vector of ISO three character country codes.}
+#' \item{\code{region}}{Correlates of War geographic region name.}
 #' \item{\code{year}}{The year of the observation.}
 #' \item{\code{troops}}{The total number of US military personnel deployed to the host country.}
 #' \item{\code{army}}{Total number of Army personnel deployed to the host country.}
@@ -57,3 +58,29 @@
 #' @source \url{https://dra.american.edu/islandora/object/auislandora%3A81234}
 #'
 "basedata"
+
+
+#' U.S. Military overseas construction spending data
+#'
+#' @description \code{builddata} returns a data frame containing geocoded location-project-year overseas military construction spending data.
+#'
+#' @return Returns the full data frame containing location-project-year observations of U.S. military construction spending data from 2008-2019.
+#'
+#' @format A data frame with country-base observations including the following variables:
+#' \describe{
+#' \item{\code{countryname}}{A character vector of country names.}
+#' \item{\code{ccode}}{A numeric vector of Correlates of War country codes.}
+#' \item{\code{year}}{Year of observed country-year spending.}
+#' \item{\code{iso3c}}{A character vector of ISO three character country codes.}
+#' \item{\code{location}}{Name of the facility where spending occurred, or host country where detailed facility information is unavailable.}
+#' \item{\code{spend_construction}}{Total obligational authority associated with the observed location-year in thousands of current US dollars.}
+#' \item{\code{lat}}{The facility's latitude.}
+#' \item{\code{lon}}{The facility's longitude.}
+#' }
+#'
+#' @docType data
+#' @keywords datasets
+#' @name builddata
+#'
+#'
+"builddata"
