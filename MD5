@@ -1,6 +1,6 @@
-5d0c44da4948e8f5384408706aeb59b8 *DESCRIPTION
+8af0a41ceadba73fab945a05650d7800 *DESCRIPTION
 44fc2131d53af401b5aac5d2cb00453e *NAMESPACE
-e8fa33868ee8cb250fc27c6ce7694930 *NEWS.md
+180d5e95303b4cbdd2d47211c3e2194b *NEWS.md
 1bad5d6f5c0db88269d43ed44bfda4cb *R/data.R
 094e52bf905a9187fe3a9b78755ba079 *R/get_basedata.R
 4a8cf941e3679889135ddcc4660f604b *R/get_builddata.R
@@ -13,7 +13,7 @@ f449b675ce5e69e9d937a98c7b74e9ac *R/zzz.R
 f61db891eb928123aba4412ca322f508 *build/partial.rdb
 2bb755f87215cac8fa091c6f8dd4a8e6 *data/basedata.rda
 8f722dfad749dd7e07d6ea06c4c67886 *data/builddata.rda
-e9a0129ad7f776294d86999bef1c9f56 *data/troopdata_rebuild_long.rda
+6f050e4e75c97eed085caa14dd27e2db *data/troopdata_rebuild_long.rda
 7bf6b27a46a1719c3f55d0e74d015605 *data/troopdata_rebuild_reports.rda
 0b5da244755328dd54be8829f8ad4af7 *inst/WORDLIST
 b44cebe10a7887f8c6e96a2b8672b2bd *man/basedata.Rd
