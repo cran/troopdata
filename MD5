@@ -1,6 +1,6 @@
-8af0a41ceadba73fab945a05650d7800 *DESCRIPTION
+fee074a33f7690c74e08c186f39e954f *DESCRIPTION
 44fc2131d53af401b5aac5d2cb00453e *NAMESPACE
-180d5e95303b4cbdd2d47211c3e2194b *NEWS.md
+e5ee3a179c4e8a380edff911dc50ad10 *NEWS.md
 1bad5d6f5c0db88269d43ed44bfda4cb *R/data.R
 094e52bf905a9187fe3a9b78755ba079 *R/get_basedata.R
 4a8cf941e3679889135ddcc4660f604b *R/get_builddata.R
@@ -9,7 +9,7 @@
 a92c35e70e3abbc4471f115233518d14 *R/troopdata-package.R
 5a79106929f690c22766f48f7d421788 *R/utils-pipe.R
 f449b675ce5e69e9d937a98c7b74e9ac *R/zzz.R
-1276f4fdafd2907a245cde14ddde12bf *README.md
+88660d71fcbba6d56a4ad2c37c390b90 *README.md
 f61db891eb928123aba4412ca322f508 *build/partial.rdb
 2bb755f87215cac8fa091c6f8dd4a8e6 *data/basedata.rda
 8f722dfad749dd7e07d6ea06c4c67886 *data/builddata.rda
@@ -31,4 +31,3 @@ e0cc31cf1094f2264a1b34b8bf9193ea *man/troopdata-package.Rd
 b6031cec8398c3e2a5083da835b552dd *man/troopdata_rebuild_long.Rd
 082f6d9594f6eff98eb588dc0851ace4 *man/troopdata_rebuild_reports.Rd
 0622a97a2aaa3c342f09636052c2d7f5 *tests/spelling.R
-9fb4529526b04872316eb46d6169e60b *tests/spelling.Rout.save
