@@ -1,3 +1,10 @@
+# troopdata 1.0.4
+
+- Fixes error where two 2008 reports were included leading to inflated values for 2008.
+- Changes Eritrea country code to Ethiopia to reflect corresponding polity in older reports.
+- Change deployment values assigned to Hong Kong after 1997 to China. 
+- Improved documentation to better explain changes in rebuilt data starting with version 1.0.0 and where discrepancies might arise between the updated data and Kane's original collection. 
+
 # troopdata 1.0.3
 
 * Added most recent deployment data through December 2024.

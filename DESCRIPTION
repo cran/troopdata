@@ -1,7 +1,7 @@
 Package: troopdata
 Title: Tools for Analyzing Cross-National Military Deployment and
         Basing Data
-Version: 1.0.3
+Version: 1.0.4
 Authors@R: 
     person(given = "Michael",
            family = "Flynn",
@@ -25,8 +25,8 @@ Suggests: testthat (>= 3.0.0), furrr, tidyselect, spelling, knitr,
         haven, maps, pdftools
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2025-06-24 20:20:27 UTC; michaelflynn
+Packaged: 2025-06-30 20:17:43 UTC; michaelflynn
 Author: Michael Flynn [aut, cre] (ORCID:
     <https://orcid.org/0000-0002-6064-740X>)
 Repository: CRAN
-Date/Publication: 2025-06-24 20:40:02 UTC
+Date/Publication: 2025-07-03 14:30:02 UTC
